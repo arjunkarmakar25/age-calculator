@@ -1,0 +1,86 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  animation: popUp 0.8s ease;
+}
+
+input[type="date"] {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+input[type="date"]:focus {
+  border-color: #2193b0;
+  box-shadow: 0 0 5px rgba(33,147,176,0.5);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2193b0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #1e6c88;
+  animation: bounce 0.5s;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: showResult 0.8s forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popUp {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes showResult {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- ✅ Working Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- ✅ Stable Animated Image (Lottie) -->
+    <lottie-player 
+      src="https://assets5.lottiefiles.com/packages/lf20_hy4txm7l.json"
+      background="transparent"  
+      speed="1"  
+      style="width: 200px; height: 200px;"  
+      loop  
+      autoplay>
+    </lottie-player>
+
+    <h1>Age Calculator</h1>
+    <label for="dob">Enter your Date of Birth:</label>
+    <input type="date" id="dob"/>
+    <button onclick="calculateAge()">Calculate Age</button>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
